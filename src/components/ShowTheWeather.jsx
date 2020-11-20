@@ -13,7 +13,7 @@ const ShowTheWeather = ({deactive, city, isActive}) => {
                 <p>Температура: {city.main.temp}°C</p>
                 <p>Відчуваєтся як : {city.main.feels_like} °C</p>
                 <p>Вологість : {city.main.humidity} %</p>
-                <p>Швидкість вітру : {city.wind.spead} m/c</p>
+                <p>Швидкість вітру : {city.wind.speed} m/c</p>
             </ModalBody>
             <ModalFooter>
                 <Button color="success" size="sm" onClick={deactive}>OK =)</Button>

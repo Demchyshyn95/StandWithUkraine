@@ -5,7 +5,7 @@ import {Container} from "reactstrap";
 import './App.css';
 import ShowTheWeather from './components/ShowTheWeather';
 import Errora from './components/Errora';
-import getServerData from "./components/restApi";
+import getServerData from "./Service/Service";
 
 class App extends React.Component {
     state = {
