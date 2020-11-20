@@ -20,7 +20,8 @@ class App extends React.Component {
         rezult ?
             this.setState({
                 city: rezult,
-                isActive: !this.state.isActive
+                isActive: !this.state.isActive,
+                error:false
             })
             :
             this.setState({
