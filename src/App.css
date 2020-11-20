@@ -1,0 +1,12 @@
+.main{
+  background-image:url("https://s1.1zoom.me/big3/447/Rivers_Sunrises_and_sunsets_Sky_Clouds_560206_2480x1320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 5px; /* Поля вокруг текста */
+  margin: 0 auto; /* Выравниваем слой по центру */
+  height: 1005px; /* Ширина слоя */
+  opacity: 0.95; /* Значение прозрачности */
+  filter: alpha(Opacity=100);
+  color:rgb(194, 123, 111);
+}
