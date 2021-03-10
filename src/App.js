@@ -1,55 +1,61 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Search from './components/Search/Search';
 import {Container} from "reactstrap";
 import './App.css';
 import ShowTheWeather from './components/ShowTheWeather';
-import Errora from './components/Errora';
-import getServerData from "./Service/Service";
+import Error from './components/Errora';
+import getServerData from "./Service";
 
-class App extends React.Component {
-    state = {
-        city: '',
-        isActive: false,
-        error: false,
+const App = () => {
+    const [isActive, setIsActive] = useState(false);
+    const [error, setError] = useState(false);
+    const [weather, setWeather] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+
+
+    const getWeather = async (city) => {
+        setError(false);
+        setLoading(!loading);
+        setDisabled(!disabled);
+
+        const response = await getServerData(city);
+        if (!response.main) {
+            setError(!error)
+            setLoading(prevState => !prevState);
+            setDisabled(prevState => !prevState);
+        } else {
+            const {main, sys, weather, name, wind} = response;
+            setWeather({main, sys, name, weather, wind})
+            setIsActive(prevState => !prevState);
+        }
     }
-    getWeather = async (e) => {
-        e.preventDefault();
-        const newCity = e.target.elements.city.value;
-        const rezult = await getServerData(newCity);
-        rezult ?
-            this.setState({
-                city: rezult,
-                isActive: !this.state.isActive,
-                error:false
-            })
-            :
-            this.setState({
-                error: true
-            })
-    }
-    deactive = () => {
-        this.setState({isActive: false})
+    const deactive = () => {
+        setLoading(prevState => !prevState);
+        setDisabled(prevState => !prevState);
+        setIsActive(prevState => !prevState);
     }
 
-    render() {
-        const {city, error, isActive} = this.state;
-        return (
-            <div className='main'>
-                <Container>
-                    <div>
-                        <Search getWeather={this.getWeather}/>
-                    </div>
-                    {city &&
-                    <ShowTheWeather city={city} deactive={this.deactive} isActive={isActive}/>
+    return (
+        <div className='main'>
+            <Container>
+                <h2>Weather App</h2>
+                <div>
+                    <Search getWeather={ getWeather } disabled={ disabled } loading={ loading }/>
+                </div>
+                <div>
+                    { weather &&
+                    <ShowTheWeather theWeather={ weather } deactive={ deactive } isActive={ isActive }/>
                     }
                     {
-                        error && <Errora/>
+                        error && <Error/>
                     }
-                </Container>
-            </div>
-        )
-    }
+                </div>
+            </Container>
+        </div>
+    )
 }
+
 
 export default App;

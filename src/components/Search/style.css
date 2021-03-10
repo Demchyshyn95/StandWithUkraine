@@ -1,6 +1,12 @@
-.asd{
+.btn{
     margin-top: 5px;
     width: 100px;
     font-size: 20px;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
 

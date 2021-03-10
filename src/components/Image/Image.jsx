@@ -1,7 +1,7 @@
 import React from 'react';
 import './image.css';
 
-const Image = ({main}) => {
+const Image = ({ main }) => {
 
     if (main === "Clouds") {
         return (<div>
@@ -26,8 +26,11 @@ const Image = ({main}) => {
         return (<div><img
             src="https://www.clipartkey.com/mpngs/m/9-92258_clip-art-lightning-storm-clipart-thunderstorm-clipart.png"/>
         </div>)
+    }else{
+        return (<div><img
+            src="https://d279m997dpfwgl.cloudfront.net/wp/2017/12/weather_album-art-1000x1000.jpg"/>
+        </div>)
     }
-    return '';
 }
 
 export default Image;

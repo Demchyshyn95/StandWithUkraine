@@ -5,7 +5,7 @@
   text-align: center;
   padding: 5px; /* Поля вокруг текста */
   margin: 0 auto; /* Выравниваем слой по центру */
-  height: 1005px; /* Ширина слоя */
+  height: 100vh; /* Ширина слоя */
   opacity: 0.95; /* Значение прозрачности */
   filter: alpha(Opacity=100);
   color:rgb(194, 123, 111);
