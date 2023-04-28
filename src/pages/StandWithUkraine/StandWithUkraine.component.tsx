@@ -1,9 +1,9 @@
+import { Container, Title, MediaContent, DonateBox, HeaderBox, TitleBold, Call } from "./styles";
+import { videoData } from "./config";
 import React from 'react';
-import { Container, Title, Donate, MediaContent, StyledImage } from "./styles";
 
 const StandWithUkraine = () => {
-	const donateSupport = "https://pbs.twimg.com/media/FMrVDWUXEAMaQuh.png";
-	
+
 	return (
 		<Container>
 			<Title>
@@ -11,19 +11,25 @@ const StandWithUkraine = () => {
 			</Title>
 			<MediaContent>
 				<iframe
-				        src="https://www.youtube.com/embed/jrr_5GgGkVg?autoplay=1&mute=0&modestbranding=1&control=0"
-				        title="YouTube video player"
-				        allow="accelerometer; frameborder=0; allowfullscreen;
-				        
-				         autoplay; clipboard-write;  encrypted-media; gyroscope; picture-in-picture; web-share"
+				        src={`${videoData.url}?autoplay=1&mute=1&modestbranding=1&control=0`}
+				        title={"YouTube video player"}
+				        allow={ videoData.permissions }
 				/>
-				<Donate>
-					<StyledImage
-						src={ donateSupport }
-						height={"400px"}
-						width={"100%"}
-					/>
-				</Donate>
+				<DonateBox>
+					<HeaderBox>
+					<TitleBold>
+						{"PLEASE HELP UKRAINE"}
+					</TitleBold>
+					<Call>
+						{"Stop putin"}
+					</Call>
+					</HeaderBox>
+					{/*<FooterBox>*/}
+					{/*	{"Thank you for your support!\n" +*/}
+					{/*		"please share it with your family and friends\n" +*/}
+					{/*		"#StandWithUkraine"}*/}
+					{/*</FooterBox>*/}
+				</DonateBox>
 			</MediaContent>
 		</Container>
 	);
