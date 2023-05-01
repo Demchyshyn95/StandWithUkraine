@@ -1,36 +1,16 @@
-import { Container, Title, MediaContent, DonateBox, HeaderBox, TitleBold, Call } from "./styles";
-import { videoData } from "./config";
-import React from 'react';
+import CarouselPage from "./Heroes/Heroes.page";
+import DonatePage from "./Donate/Donate.page";
+import { Container } from "./styles";
+import React, { FC } from 'react';
 
-const StandWithUkraine = () => {
-
+const StandWithUkraine: FC = () => {
 	return (
 		<Container>
-			<Title>
-				{"WAR IN UKRAINE 24.02.2022 4:00..."}
-			</Title>
-			<MediaContent>
-				<iframe
-				        src={`${videoData.url}?autoplay=1&mute=1&modestbranding=1&control=0`}
-				        title={"YouTube video player"}
-				        allow={ videoData.permissions }
-				/>
-				<DonateBox>
-					<HeaderBox>
-					<TitleBold>
-						{"PLEASE HELP UKRAINE"}
-					</TitleBold>
-					<Call>
-						{"Stop putin"}
-					</Call>
-					</HeaderBox>
-					{/*<FooterBox>*/}
-					{/*	{"Thank you for your support!\n" +*/}
-					{/*		"please share it with your family and friends\n" +*/}
-					{/*		"#StandWithUkraine"}*/}
-					{/*</FooterBox>*/}
-				</DonateBox>
-			</MediaContent>
+			{/*<StyleFirstSection/>*/}
+			<DonatePage/>
+			{/*<StyleSecondSection/>*/}
+			<CarouselPage/>
+			{/*<StyleThirdSection/>*/}
 		</Container>
 	);
 };

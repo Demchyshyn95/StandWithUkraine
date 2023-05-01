@@ -13,16 +13,12 @@ import { Content } from "./styles";
 const RootPage: FC = (): React.ReactElement => {
 	const location = useLocation();
 	console.log("Location", location);
-
+	
 	return (
 		<>
 			<LayoutPage/>
 			<Content>
 				<Routes>
-					<Route
-						path={RoutesURL.BASE}
-						element={<HomePage/>}
-					/>
 					<Route
 						path={RoutesURL.USDT_BTC}
 						element={<CurrencyPage/>}
@@ -40,7 +36,7 @@ const RootPage: FC = (): React.ReactElement => {
 						element={<ErrorPage/>}
 					/>
 					<Route
-						element={<Navigate to="/" replace/>}
+						element={<Navigate to={RoutesURL.STAND_WITH_UKRAINE} replace/>}
 						path={"*"}
 					/>
 				</Routes>

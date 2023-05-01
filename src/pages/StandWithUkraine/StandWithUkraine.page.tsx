@@ -1,15 +1,11 @@
 import StandWithUkraine from "./StandWithUkraine.component";
-import React from 'react';
+import React, { FC } from 'react';
 
-const StandWithUkrainePage = () => {
+const StandWithUkrainePage: FC = () => {
 	console.log("StandWithUkrainePage");
-	
+
 	return (
-		<StandWithUkraine
-			{...{
-			
-			}}
-		/>
+		<StandWithUkraine/>
 	);
 };
 
