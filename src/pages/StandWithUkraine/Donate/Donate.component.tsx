@@ -14,7 +14,7 @@ const Donate: FC<ComponentProps> = (props: ComponentProps) => {
 			</Title>
 			<MediaContent>
 				<iframe
-					src={`${videoData.url}?autoplay=1&mute=2&modestbranding=1&control=1`}
+					src={`${videoData.url}?autoplay=1&mute=0&modestbranding=1&control=1`}
 					allow={videoData.permissions}
 					loading={"lazy"}
 				/>

@@ -1,11 +1,16 @@
 import Heroes from "./Heroes.component";
-import React from 'react';
+import React, { FC, useCallback } from 'react';
+import { donateUrl } from "../Donate/config";
 
-const HeroesPage = () => {
+const HeroesPage: FC = () => {
+	const onRedirectToDonate = useCallback(() => {
+		window.open(donateUrl, "_blank")
+	}, []);
+
 	return (
 		<Heroes
 			{...{
-			
+				onRedirectToDonate
 			}}
 		/>
 	);

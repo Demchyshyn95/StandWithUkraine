@@ -6,27 +6,28 @@ import React, { FC } from 'react';
 import { heroes } from "./config";
 
 const Heroes: FC<ComponentProps> = (props: ComponentProps) => {
-
+	const { onRedirectToDonate } = props // func
 	return (
 		<Container>
 			<Content>
 				<Title>
-					{"DEFENDERS OF FREEDOM"}
+					{ "DEFENDERS OF FREEDOM" }
 				</Title>
 			</Content>
 			<StyleList>
-				{heroes.map((hero: IHero) => <CardPage {...{
+				{ heroes.map((hero: IHero) => <CardPage { ...{
 					hero
 				}}/>)}
 				<LoadMore>
-					{"Load more =>>>"}
+					{ "Load more =>" }
 				</LoadMore>
 			</StyleList>
 			<Footer>
 				<BtnDonate
-					type={"link"}
+					type={ "link" }
+					onClick={ onRedirectToDonate }
 				>
-					{"DONATE TO THE BRAVE"}
+					{ "DONATE TO THE BRAVE" }
 				</BtnDonate>
 			</Footer>
 		</Container>

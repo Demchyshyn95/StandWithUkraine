@@ -6,8 +6,8 @@ export const Container = styled.div`
 	position: relative;
 `;
 export const CardStyle = styled.img`
-	width: 95%;
-	height: 550px;
+	width: 99%;
+	height: 600px;
 `;
 
 export const Logo = styled.span`
@@ -17,16 +17,19 @@ export const Logo = styled.span`
 	text-transform: uppercase;
 	font-size: 22px;
 	background: white;
-	left: 70%;
+	left: 78%;
 	top: 15px;
 `;
 
 export const Description = styled.span`
+	width: 99%;
+	height: 85px;
+	text-align: center;
 	position: absolute;
-	font-weight: 600;
+	font-weight: 700;
 	font-family: math;
 	color: white;
 	font-size: 22px;
-	bottom: 20px;
+	bottom: 0;
 	left: 0;
 `;

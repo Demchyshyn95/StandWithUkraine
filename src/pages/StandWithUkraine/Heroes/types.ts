@@ -1,1 +1,3 @@
-export interface ComponentProps {};
+export interface ComponentProps {
+	onRedirectToDonate: () => void;
+}

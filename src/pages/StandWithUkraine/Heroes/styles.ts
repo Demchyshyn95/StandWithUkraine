@@ -42,14 +42,21 @@ export const LoadMore = styled.div`
 	text-align: center;
 `;
 
-export const BtnDonate = styled(Button)``;
+export const BtnDonate = styled(Button)`
+	padding-top: 0;
+	background: #ffc60a;
+	height: 120px;
+	color: black;
+	font-weight: 700;
+	font-size: 75px;
+	font-family: system-ui;
+`;
 
 export const Footer = styled.div`
 	background-image: url("https://pbs.twimg.com/media/FM0rA0fWUAIp4ph.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	color: yellow;
-	font-size: 60px;
 	display: flex;
 	align-items: end;
 	justify-items: center;

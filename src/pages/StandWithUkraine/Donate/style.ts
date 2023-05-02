@@ -134,5 +134,6 @@ export const FooterCall = styled(FooterText)`
 
 export const Content = styled.div``;
 export const FooterTitle = styled(TitleBold)`
-	margin-top: 150px;
+	text-align: center;
+	margin-top: 390px;
 `;
