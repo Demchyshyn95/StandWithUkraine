@@ -1,4 +1,4 @@
 export interface IHero {
-	image: string;
+	url: string;
 	title: string
 }

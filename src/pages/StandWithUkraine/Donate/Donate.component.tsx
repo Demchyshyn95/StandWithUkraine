@@ -1,8 +1,8 @@
 import { Call, DonateBox, FooterBox, FooterCall, FooterText, HeaderBox,	LeftBox, Link, MediaContent, Message, MessageContainer, NextLine, RightBox, RightMessage, StyledQrCode,
-	Title, TitleBold, Content } from "./style";
+	Title, TitleBold, Content, FooterTitle } from "./style";
 import { donateUrl, videoData } from "./config";
-import React, { FC } from 'react';
 import { ComponentProps } from "./types";
+import React, { FC } from 'react';
 
 const Donate: FC<ComponentProps> = (props: ComponentProps) => {
 	const { onRedirectToDonate } = props; // func
@@ -78,6 +78,9 @@ const Donate: FC<ComponentProps> = (props: ComponentProps) => {
 					</FooterBox>
 				</DonateBox>
 			</MediaContent>
+			<FooterTitle>
+				{"Glory to Ukraine! Glory to the heroes!"}
+			</FooterTitle>
 		</Content>
 	);
 };

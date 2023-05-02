@@ -37,7 +37,6 @@ export const DonateBox = styled.div`
 	//background: linear-gradient(180deg, rgba(12,12,210,1) 38%, rgba(227,226,23,1) 61%);
 	//border: 10px solid black;
 	width: 700px;
-
 `;
 
 export const HeaderBox = styled.div`
@@ -100,9 +99,9 @@ export const Message = styled.div`
 `;
 
 export const RightMessage = styled(Message)`
-  color: #641515;
-  font-size: 18px;
-  font-weight: 500;
+	color: #641515;
+	font-size: 18px;
+	font-weight: 500;
 `;
 
 export const NextLine = styled.br``;
@@ -121,16 +120,19 @@ export const StyledQrCode = styled(QRCode)`
 `;
 
 export const FooterText = styled(Message)`
-  font-size: 22px;
+	font-size: 22px;
 	text-transform: uppercase;
-  color: rgb(219, 224, 231);
-  font-weight: 600;
+	color: rgb(219, 224, 231);
+	font-weight: 600;
 `;
 
 export const FooterCall = styled(FooterText)`
-  font-size: 26px;
-  font-weight: 600;
-  color: rgb(255, 242, 3);
+	font-size: 26px;
+	font-weight: 600;
+	color: rgb(255, 242, 3);
 `;
 
 export const Content = styled.div``;
+export const FooterTitle = styled(TitleBold)`
+	margin-top: 150px;
+`;

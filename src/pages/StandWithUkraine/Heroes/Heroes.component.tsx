@@ -1,4 +1,4 @@
-import { StyleList, Container, Title, Content } from "./styles";
+import { StyleList, Container, Title, Content, LoadMore, BtnDonate, Footer } from "./styles";
 import CardPage from "../../../components/general/Card/Card.page";
 import { ComponentProps } from "./types";
 import { IHero } from "../../../types";
@@ -18,7 +18,17 @@ const Heroes: FC<ComponentProps> = (props: ComponentProps) => {
 				{heroes.map((hero: IHero) => <CardPage {...{
 					hero
 				}}/>)}
+				<LoadMore>
+					{"Load more =>>>"}
+				</LoadMore>
 			</StyleList>
+			<Footer>
+				<BtnDonate
+					type={"link"}
+				>
+					{"DONATE TO THE BRAVE"}
+				</BtnDonate>
+			</Footer>
 		</Container>
 	);
 };
