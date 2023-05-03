@@ -132,8 +132,14 @@ export const FooterCall = styled(FooterText)`
 	color: rgb(255, 242, 3);
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+	background-image: url("https://i0.wp.com/epthinktank.eu/wp-content/uploads/2023/03/EPRS_BRIE_TT_745688_Russia_war_Ukraine_final.jpeg?fit=1000%2C666&ssl=1");
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 80px;
+	padding-bottom: 100px;
+`;
 export const FooterTitle = styled(TitleBold)`
 	text-align: center;
-	margin-top: 390px;
+	margin-top: 200px;
 `;

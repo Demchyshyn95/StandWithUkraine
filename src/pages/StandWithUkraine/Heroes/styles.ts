@@ -11,7 +11,7 @@ export const StyleList = styled.div`
 `;
 
 export const Container = styled.div`
-	margin: 100px 0 200px 0;
+	margin-bottom: 200px;
 	text-align: center;
 	//background-image: url("https://newshub.shorthandstories.com/assets/S21x0AamP5/fallback-750x667.jpg");
 	//background-size: cover;
@@ -45,11 +45,12 @@ export const LoadMore = styled.div`
 export const BtnDonate = styled(Button)`
 	padding-top: 0;
 	background: #ffc60a;
-	height: 120px;
+	height: 15px;
 	color: black;
 	font-weight: 700;
-	font-size: 75px;
+	font-size: 42px;
 	font-family: system-ui;
+	margin-left: 20px;
 `;
 
 export const Footer = styled.div`
@@ -58,7 +59,8 @@ export const Footer = styled.div`
 	background-attachment: fixed;
 	color: yellow;
 	display: flex;
-	align-items: end;
-	justify-items: center;
+	align-items: center;
+	justify-items: left;
+	flex-wrap: wrap;
 	height: 950px;
 `;

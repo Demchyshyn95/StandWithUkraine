@@ -6,7 +6,7 @@ export const Container = styled.div`
 	position: relative;
 `;
 export const CardStyle = styled.img`
-	width: 99%;
+	width: 100%;
 	height: 600px;
 `;
 
@@ -17,8 +17,9 @@ export const Logo = styled.span`
 	text-transform: uppercase;
 	font-size: 22px;
 	background: white;
-	left: 78%;
+	left: 75%;
 	top: 15px;
+ 
 `;
 
 export const Description = styled.span`
